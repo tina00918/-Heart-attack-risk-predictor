@@ -10,8 +10,12 @@ import pickle
 import streamlit as st
 from PIL import Image
 
-image = Image.open('/home/sentieo/Deploying_ml/image.jpg')
-st.image(image)
+#image = Image.open('/home/sentieo/Deploying_ml/image.jpg')
+ st.image(
+            "https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall.jpg",
+            width=400, # Manually Adjust the width of the image as per requirement
+        )
+#st.image(image)
 
 loaded_model = pickle.load(open('/home/sentieo/Deploying_ml/trained_model(1).sav', 'rb'))
 
